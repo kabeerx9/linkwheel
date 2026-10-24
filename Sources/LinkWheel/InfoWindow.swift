@@ -44,9 +44,9 @@ struct InfoView: View {
   var body: some View {
     VStack(alignment: .leading, spacing: 14) {
       HStack(spacing: 10) {
-        Image(systemName: "circle.circle.fill")
-          .font(.system(size: 26))
-          .foregroundStyle(.tint)
+        Image(nsImage: NSApp.applicationIconImage)
+          .resizable()
+          .frame(width: 40, height: 40)
         VStack(alignment: .leading, spacing: 1) {
           Text("LinkWheel").font(.headline)
           Text("Version \(version)").font(.caption).foregroundStyle(.secondary)
